@@ -1,1 +1,3 @@
-console.log('this is a test javascript code')
+'use strict';
+
+var eff = new ConstalationEffect('canvasElement', {});

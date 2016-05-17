@@ -11,6 +11,8 @@ var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
 var inlinesource = require('gulp-inline-source');
+var babel = require('gulp-babel');
+
 
 gulp.task('test',function(){
 	console.log('testing gulp task');
@@ -24,17 +26,26 @@ gulp.task('sass',function(){
 				stream:true
 			}));
 });
-
+gulp.task('esbabel',function(){
+	return gulp.src('src/es6/**/*.js')
+			.pipe(babel())
+			.pipe(gulp.dest('src/js'))
+			.pipe(browserSync.reload({
+				stream:true
+			}));
+});
 //Gulp watch syntax
 //gulp.watch('files-to-watch',['tasks','to','run']);
 
 //when a task depends on other task
 //gulp.task('watch',['array','of','task','to','complete','before'],function(){ ... })
-gulp.task('watch',['browserSync','sass'],function(){
-	gulp.watch('src/scss/**/*.scss',['sass'])
-	//Reload the browser whenever HTML or JS files change
+gulp.task('watch',['browserSync','sass','esbabel'],function(){
+	//Perform the tasks when file changes which in turn reloads the browser
+	gulp.watch('src/scss/**/*.scss',['sass']);
+	gulp.watch('src/es6/**/*.js',['esbabel']);
+	//Reload the browser whenever HTML changes
 	gulp.watch('src/*.html',browserSync.reload);
-	gulp.watch('src/js/**/*.js',browserSync.reload);
+	
 });
 
 gulp.task('browserSync',function(){
@@ -104,7 +115,7 @@ gulp.task('postbuild',function(){
 });
 gulp.task('default',function(callback){
 	runSequence(
-			['sass','browserSync','watch'],
+			['esbabel','sass','browserSync','watch'],
 			callback
 		)
 })
