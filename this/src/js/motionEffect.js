@@ -49,6 +49,7 @@ var ConstalationEffect = function () {
 			DOT_COLOR: color,
 			CIR_RAD: rad
 		};
+		//console.log('config',this.config)
 		//Initialize the particles with default position
 		this.initializeDefaults();
 	}
@@ -106,9 +107,9 @@ var ConstalationEffect = function () {
 			//set number of particles based on screen size
 			var dots = Math.floor(window.innerWidth / 25);
 			//Adding particles in the array (equal to number of dots)
-			for (var i = 0; i < this.dots; i++) {
+			for (var i = 0; i < dots; i++) {
 				//get the data for particle add push to particles array
-				particles.push(this.addParticle());
+				this.particles.push(this.addParticle());
 			}
 			//4. Attaching event listners
 			//Attach mouse move handler to enlarge dots
@@ -122,7 +123,7 @@ var ConstalationEffect = function () {
 			//Call a redraw according to frameRate
 			setInterval(function () {
 				_this.redraw();
-			}, 2000);
+			}, 20);
 			this.context.beginPath();
 			this.resizeHandler();
 		}
@@ -157,12 +158,19 @@ var ConstalationEffect = function () {
    	The opacity of line is based on the distance between the points
    	If the distance is more than the MAX_DIST_SQ, we will not draw
    */
-			var dist = this.disBtwSq(particle, arr[colIndex]);
+			var dist = this.disBtwSq(p1, p2);
 			if (dist < this.config.MAX_DIST_SQ) {
 				this.context.moveTo(p1.x, p1.y);
 				var dirx = p1.x > p2.x ? p1.x : p2.x;
-				var diry = p1.y < p2.y ? p1.x : p2.y;
-				this.context.quadraticCurveTo(dirx, diry, p1.x, p1.y);
+				var diry = p1.y < p2.y ? p1.y : p2.y;
+				/*
+    	Understanding quadraticCurve
+    	point1 : x1,y1 [Move to]
+    	point2 : x2,y2
+    	control Point : x3,y3 => x3=max(x1,x2) & y3=min(y1,y2)
+    	quadraticCurveTo(x3,y3,x2,y2)
+    */
+				this.context.quadraticCurveTo(dirx, diry, p2.x, p2.y);
 				this.context.strokeStyle = 'rgba(249,179,121,' + (1 - dist / this.config.MAX_DIST_SQ) + ' )';
 			}
 		}
@@ -276,15 +284,13 @@ var ConstalationEffect = function () {
    	of all the connected dots in a matrix.
    	so if a is connected to b, (a,b) and (b,a) will become true
     */
-			var dots = this.particles.length;
-			//let connectedPoints = getConnMatrix(dots);
 
 			//Running a nested loop for particles
 			//it matches every particle with other to draw else
 			this.particles.forEach(function (particle, rowIndex, arr) {
 				_this2.context.beginPath();
 
-				for (var _colIndex = 0; _colIndex < rowIndex; _colIndex++) {
+				for (var colIndex = 0; colIndex < rowIndex; colIndex++) {
 					/* Checking for only half of the matrix
      	X | 0 | 1 | 2 | 3 | ...
      	0   x   x   x   x   ...
@@ -297,9 +303,10 @@ var ConstalationEffect = function () {
      	2. for 2&1, only 2,1 will be processed not 1,2
      */
 					//Drow line if required between the two points
-					_this2.drawLine(particle, arr[_colIndex]);
+					_this2.drawLine(particle, arr[colIndex]);
 				}
 				_this2.context.stroke();
+				_this2.context.fillStyle = _this2.config.DOT_COLOR;
 				_this2.drawDot(particle);
 			});
 		}
@@ -322,3 +329,4 @@ var ConstalationEffect = function () {
 	return ConstalationEffect;
 }();
 //export default ConstalationEffect;
+//# sourceMappingURL=motionEffect.js.map

@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":[],"mappings":";;AACA,IAAM,MAAM,IAAI,kBAAJ,CAAuB,eAAvB,EAAuC,EAAvC,CAAZ","file":"index.js","sourcesContent":["\nconst eff = new ConstalationEffect('canvasElement',{});\n"],"sourceRoot":"/source/"}

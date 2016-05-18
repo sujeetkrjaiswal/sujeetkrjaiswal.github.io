@@ -12,7 +12,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var inlinesource = require('gulp-inline-source');
 var babel = require('gulp-babel');
-
+var sourcemaps = require("gulp-sourcemaps");
 
 gulp.task('test',function(){
 	console.log('testing gulp task');
@@ -28,7 +28,9 @@ gulp.task('sass',function(){
 });
 gulp.task('esbabel',function(){
 	return gulp.src('src/es6/**/*.js')
+			.pipe(sourcemaps.init())
 			.pipe(babel())
+			.pipe(sourcemaps.write("."))
 			.pipe(gulp.dest('src/js'))
 			.pipe(browserSync.reload({
 				stream:true

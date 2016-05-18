@@ -35,6 +35,7 @@ class ConstalationEffect{
 			DOT_COLOR:color,
 			CIR_RAD:rad
 		}
+		//console.log('config',this.config)
 		//Initialize the particles with default position
 		this.initializeDefaults();
 	}
@@ -85,9 +86,9 @@ class ConstalationEffect{
 			//set number of particles based on screen size
 		let dots = Math.floor(window.innerWidth/25);
 			//Adding particles in the array (equal to number of dots)
-		for(let i=0;i<this.dots;i++){
+		for(let i=0;i<dots;i++){
 			//get the data for particle add push to particles array
-			particles.push(this.addParticle())
+			this.particles.push(this.addParticle())
 		}
 		//4. Attaching event listners
 			//Attach mouse move handler to enlarge dots
@@ -95,7 +96,7 @@ class ConstalationEffect{
 			//Attach window resize handler to adjust size of window
 		window.addEventListener('resize', (e)=>{this.resizeHandler(e)}, false);
 			//Call a redraw according to frameRate
-		setInterval( ()=>{this.redraw()}, 2000 );
+		setInterval( ()=>{this.redraw()}, 20 );
 		this.context.beginPath();
 		this.resizeHandler();	
 
@@ -125,12 +126,19 @@ class ConstalationEffect{
 			The opacity of line is based on the distance between the points
 			If the distance is more than the MAX_DIST_SQ, we will not draw
 		*/
-		let dist = this.disBtwSq(particle,arr[colIndex]);
+		let dist = this.disBtwSq(p1,p2);
 		if(dist < this.config.MAX_DIST_SQ){
 			this.context.moveTo(p1.x,p1.y);
 			let dirx = p1.x > p2.x ? p1.x : p2.x;
-			let diry = p1.y < p2.y ? p1.x : p2.y;
-			this.context.quadraticCurveTo(dirx,diry,p1.x,p1.y);
+			let diry = p1.y < p2.y ? p1.y : p2.y;
+			/*
+				Understanding quadraticCurve
+				point1 : x1,y1 [Move to]
+				point2 : x2,y2
+				control Point : x3,y3 => x3=max(x1,x2) & y3=min(y1,y2)
+				quadraticCurveTo(x3,y3,x2,y2)
+			*/
+			this.context.quadraticCurveTo(dirx,diry,p2.x,p2.y);
 			this.context.strokeStyle = 'rgba(249,179,121,' + (1 - dist / this.config.MAX_DIST_SQ) +' )';
 		}
 				
@@ -219,6 +227,7 @@ class ConstalationEffect{
 		return connMatrix;	
 	}*/
 	redraw(){
+
 		/*
 		This will  redraw the cavas, by updating the
 		particle postions.
@@ -237,8 +246,6 @@ class ConstalationEffect{
 			of all the connected dots in a matrix.
 			so if a is connected to b, (a,b) and (b,a) will become true
 		 */				
-		let dots = this.particles.length;
-		//let connectedPoints = getConnMatrix(dots);
 		
 		//Running a nested loop for particles
 		//it matches every particle with other to draw else
@@ -261,6 +268,7 @@ class ConstalationEffect{
 				this.drawLine(particle,arr[colIndex]);
 			}
 			this.context.stroke();
+			this.context.fillStyle = this.config.DOT_COLOR;	
 			this.drawDot(particle);
 		})
 		
