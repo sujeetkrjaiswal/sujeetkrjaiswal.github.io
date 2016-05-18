@@ -13,6 +13,7 @@ var runSequence = require('run-sequence');
 var inlinesource = require('gulp-inline-source');
 var babel = require('gulp-babel');
 var sourcemaps = require("gulp-sourcemaps");
+var htmlmin = require('gulp-htmlmin');
 
 gulp.task('test',function(){
 	console.log('testing gulp task');
@@ -113,6 +114,7 @@ gulp.task('build',function(callback){
 gulp.task('postbuild',function(){
 	return gulp.src('dist/index.html')
 			.pipe(inlinesource())
+			.pipe(htmlmin({collapseWhitespace: true}))
 			.pipe(gulp.dest('..'))
 });
 gulp.task('default',function(callback){
