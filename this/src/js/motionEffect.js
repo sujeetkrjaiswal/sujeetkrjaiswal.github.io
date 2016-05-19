@@ -121,9 +121,8 @@ var ConstalationEffect = function () {
 				_this.resizeHandler(e);
 			}, false);
 			//Call a redraw according to frameRate
-			setInterval(function () {
-				_this.redraw();
-			}, 20);
+			//setInterval( ()=>{this.redraw()}, 20 );
+			this.redraw();
 			this.context.beginPath();
 			this.resizeHandler();
 		}
@@ -266,6 +265,9 @@ var ConstalationEffect = function () {
 		value: function redraw() {
 			var _this2 = this;
 
+			requestAnimationFrame(function () {
+				_this2.redraw();
+			});
 			/*
    This will  redraw the cavas, by updating the
    particle postions.

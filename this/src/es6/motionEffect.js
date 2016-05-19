@@ -96,7 +96,8 @@ class ConstalationEffect{
 			//Attach window resize handler to adjust size of window
 		window.addEventListener('resize', (e)=>{this.resizeHandler(e)}, false);
 			//Call a redraw according to frameRate
-		setInterval( ()=>{this.redraw()}, 20 );
+		//setInterval( ()=>{this.redraw()}, 20 );
+		this.redraw();
 		this.context.beginPath();
 		this.resizeHandler();	
 
@@ -227,7 +228,7 @@ class ConstalationEffect{
 		return connMatrix;	
 	}*/
 	redraw(){
-
+		requestAnimationFrame(()=>{this.redraw()});
 		/*
 		This will  redraw the cavas, by updating the
 		particle postions.
