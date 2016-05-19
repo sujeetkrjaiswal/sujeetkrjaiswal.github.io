@@ -106,9 +106,10 @@ gulp.task('cache:clear',function(callback){
 gulp.task('build',function(callback){
 	runSequence(
 		'clean:dist',
-		['pserver','sass','esbabel'],
+		['sass','esbabel'],
 		['useref','images','fonts'],
 		'postbuild',
+		'pserver',
 		callback
 		)
 });
