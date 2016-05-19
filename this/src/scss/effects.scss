@@ -1,5 +1,6 @@
 //This contains the effects
-$color:blue;
-.effect{
-	color:$color;
+#canvasElement{
+	position: fixed;
+	top:0px;
+	left:0px;
 }
