@@ -1,0 +1,103 @@
+a {
+  text-decoration: none; }
+
+.center-container {
+  position: relative; }
+  .center-container .center-item {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.f-width {
+  width: 100%; }
+
+.small-caps {
+  font-variant: small-caps; }
+
+.margintb-30 {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.padd10 {
+  padding: 10px; }
+
+.fRight {
+  float: right; }
+
+.txtCenter {
+  text-align: center; }
+
+.txtJustify {
+  text-align: justify; }
+
+.display-3 .material-icons, .headline .material-icons {
+  font-size: inherit;
+  vertical-align: middle; }
+
+#profView {
+  min-height: 90vh;
+  padding-top: 50px;
+  width: 100%;
+  text-align: center; }
+  #profView .center-item {
+    top: 40%; }
+  #profView h1 {
+    font-size: 1.75rem; }
+    @media only screen and (min-width: 34em) {
+      #profView h1 {
+        font-size: 2.25rem; } }
+    @media only screen and (min-width: 48em) {
+      #profView h1 {
+        font-size: 4rem; } }
+    @media only screen and (min-width: 62em) {
+      #profView h1 {
+        font-size: 5rem; } }
+  #profView h6 {
+    font-size: 1rem; }
+    @media only screen and (min-width: 48em) {
+      #profView h6 {
+        font-size: 1.25rem; } }
+    @media only screen and (min-width: 62em) {
+      #profView h6 {
+        font-size: 2rem; } }
+  #profView .socialIcons {
+    padding-top: 10px; }
+    #profView .socialIcons svg {
+      width: 20px;
+      height: 20px;
+      padding: 10px;
+      position: relative;
+      transition: all linear 0.25s;
+      fill: #555;
+      cursor: pointer; }
+      #profView .socialIcons svg:hover {
+        transition: all linear 0.25s;
+        transform: scale(1.15);
+        fill: #333; }
+      @media only screen and (min-width: 34em) {
+        #profView .socialIcons svg {
+          width: 25px;
+          height: 25px; } }
+      @media only screen and (min-width: 48em) {
+        #profView .socialIcons svg {
+          width: 30px;
+          height: 30px; } }
+      @media only screen and (min-width: 62em) {
+        #profView .socialIcons svg {
+          width: 40px;
+          height: 40px; } }
+
+#contactThanks {
+  display: none; }
+
+.thanks-card.mdl-card {
+  width: 320px;
+  height: 320px;
+  max-width: 100%;
+  margin: auto; }
+
+.thanks-card > .mdl-card__title {
+  color: #fff;
+  background: url("../images/dog.png") bottom right 15% no-repeat #46B6AC; }
