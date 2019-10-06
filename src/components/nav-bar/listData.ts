@@ -15,6 +15,12 @@ const listEntries: IListEntry[] = [{
   url: null,
   target: '_self',
   children: [{
+    id: 'get-in-touch',
+    name: 'Get in touch',
+    url: '/#getInTouch',
+    icon: null,
+    target: '_self',
+  }, {
     id: 'list-cv-summary',
     name: 'Summary',
     url: '/#summary',

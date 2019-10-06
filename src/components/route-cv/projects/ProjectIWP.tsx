@@ -9,6 +9,7 @@ const iwpStyles = makeStyles((theme: Theme) => createStyles({
     display: 'block',
     margin: '8px auto',
     maxWidth: '100%',
+    border: 'none',
     [theme.breakpoints.only('xs')]: {
       width: '100%',
       height: '200px',
@@ -23,7 +24,7 @@ const iwpStyles = makeStyles((theme: Theme) => createStyles({
     },
     [theme.breakpoints.up('lg')]: {
       height: '315px',
-      width: '560px',
+      width: '560px'
     },
   }
 }))
@@ -32,7 +33,7 @@ const video = (className: string) => (<iframe
   title="Infosys Wingspan Intro Video"
   src="https://www.youtube.com/embed/fsK0WSDqWqY"
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  />)
+/>)
 
 export default () => {
   const classes = iwpStyles()

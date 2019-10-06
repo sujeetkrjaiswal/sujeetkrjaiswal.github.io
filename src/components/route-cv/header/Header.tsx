@@ -67,7 +67,7 @@ export default () => {
             variant="outlined"
           />
         </div>
-        <Typography variant="body1" className={classes.content + ' cursive'} align="center" color="secondary">
+        <Typography variant="body1" className={classes.content + ' cursive'} align="center" color="primary">
           I design and develop experiences that makes people's live simple.
       </Typography>
       </div>
