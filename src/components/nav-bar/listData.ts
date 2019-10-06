@@ -45,6 +45,12 @@ const listEntries: IListEntry[] = [{
     icon: null,
     target: '_self',
   }, {
+    id: 'list-cv-personalProjects',
+    name: 'Personal Projects',
+    url: '/#personalProjects',
+    icon: null,
+    target: '_self',
+  }, {
     id: 'list-cv-awards',
     name: 'Awards',
     url: '/#awards',

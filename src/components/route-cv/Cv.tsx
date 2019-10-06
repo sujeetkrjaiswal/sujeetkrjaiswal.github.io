@@ -12,10 +12,12 @@ import Education from './education/Education'
 import Experience from './experience/Experience'
 import Header from './header/Header'
 import Projects from './projects/Projects'
+import PersonalProjects from './personal-projects/PersonalProjects'
 import Skills from './skills/Skills'
 import Summary from './summary/Summary'
 import Tech from './tech/Tech'
 import TestScores from './test-scores/TestScores'
+
 interface IProps {
   profileData: IProfileData | null | undefined,
   profileStatus: EnumProfileDataStatus,
@@ -37,6 +39,7 @@ class Cv extends Component<IProps> {
         <Skills />
         <Experience />
         <Projects />
+        <PersonalProjects />
         <Awards />
         <Certification />
         <TestScores />

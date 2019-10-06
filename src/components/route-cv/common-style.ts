@@ -2,7 +2,7 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core'
 
 export default makeStyles((theme: Theme) => createStyles({
   anchorOverride: {
-    color: theme.palette.text.primary
+    color: theme.palette.text.primary,
   },
   card: {
     margin: theme.spacing(3, 0),
@@ -15,12 +15,12 @@ export default makeStyles((theme: Theme) => createStyles({
     marginBottom: theme.spacing(2),
   },
   logo: {
-    height: '3em',
-    width: '3em',
+    height: '3rem',
+    width: '3rem',
   },
   smallLogo: {
-    height: '2em',
-    width: '2em',
+    height: '2rem',
+    width: '2rem',
   },
   subheading: {
     margin: theme.spacing(4, 0, 2, 0),
