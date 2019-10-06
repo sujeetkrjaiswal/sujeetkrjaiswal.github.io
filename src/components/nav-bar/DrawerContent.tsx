@@ -1,7 +1,7 @@
 // tslint:disable: jsx-no-multiline-js
 
 import {
-  Collapse, createStyles, Divider, Link,
+  Collapse, createStyles, Divider,
   List, ListItem, ListItemIcon,
   ListItemText, makeStyles, Theme,
 } from '@material-ui/core'
