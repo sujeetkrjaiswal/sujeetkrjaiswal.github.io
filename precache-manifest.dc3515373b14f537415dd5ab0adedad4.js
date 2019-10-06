@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a2bdad58fae50c40c016a395730dd837",
+    "revision": "237b841bed64096ded140c3220d3c763",
     "url": "/index.html"
   },
   {
-    "revision": "823a59f123e571051cb5",
-    "url": "/static/css/main.a3d8b03b.chunk.css"
+    "revision": "e17a4017c41f75776f22",
+    "url": "/static/css/main.5ca94b3c.chunk.css"
   },
   {
-    "revision": "30c8d78226ec69e69b25",
-    "url": "/static/js/2.4c50f2e6.chunk.js"
+    "revision": "e583a57073b5ba3f57d4",
+    "url": "/static/js/2.aa2b1a94.chunk.js"
   },
   {
-    "revision": "823a59f123e571051cb5",
-    "url": "/static/js/main.e66bbfc1.chunk.js"
+    "revision": "e17a4017c41f75776f22",
+    "url": "/static/js/main.e493fea8.chunk.js"
   },
   {
     "revision": "bca64eb792e9c57d4a3e",
     "url": "/static/js/runtime-main.712e88b3.js"
   },
   {
-    "revision": "bebf758ba7396c3100e4791101ba3733",
-    "url": "/static/media/afe17-award.bebf758b.jpeg"
+    "revision": "ac22d7b51bf2c1782651ab2a15abac8b",
+    "url": "/static/media/afe-thumb2.ac22d7b5.jpg"
+  },
+  {
+    "revision": "b5d38a5146e7c9d54a6ccfd0a61f5360",
+    "url": "/static/media/afe17-award.b5d38a51.jpeg"
   },
   {
     "revision": "8b94358066f17f108fdda19bec3f15c3",
@@ -34,6 +38,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "855242a65a456badae7a1b265018a4d0",
     "url": "/static/media/bootstrap.855242a6.svg"
+  },
+  {
+    "revision": "97e1ad1bf907a4cfc8113f8b83eb3350",
+    "url": "/static/media/contact-qr.97e1ad1b.svg"
   },
   {
     "revision": "fa2228d1eba72a20c723c5f407eecb9f",
@@ -72,12 +80,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/infosys.8ab8a393.jpeg"
   },
   {
-    "revision": "2e8f70f983eaafc1738f7decf35d94ed",
-    "url": "/static/media/insta-award.2e8f70f9.jpeg"
+    "revision": "8272beddf3a3aa3f7248b195a9ed7246",
+    "url": "/static/media/insta-award.8272bedd.jpeg"
   },
   {
     "revision": "fdfaf73d071beefb2f00cccf6201a84c",
     "url": "/static/media/java.fdfaf73d.svg"
+  },
+  {
+    "revision": "c152d4d93c7fce4a651f5f31cdb1c394",
+    "url": "/static/media/jenkins.c152d4d9.png"
   },
   {
     "revision": "87711407412494d529d45ee76167583c",
@@ -90,6 +102,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "cb2f65a2181811ba82d3db0ed0880d1c",
     "url": "/static/media/material-ui.cb2f65a2.svg"
+  },
+  {
+    "revision": "7dfbacfdbcd8c195b8192a24829cbbcd",
+    "url": "/static/media/me.7dfbacfd.jpg"
   },
   {
     "revision": "dcc24d87ac8342024bf027d61b741015",
@@ -144,8 +160,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/stackoverflow.b3afa248.png"
   },
   {
-    "revision": "344b1715f9b2655d6236628555bfafd7",
-    "url": "/static/media/techChamp-award.344b1715.jpeg"
+    "revision": "10f5d6a7e19a24ec87da5c0bf1d7e014",
+    "url": "/static/media/techChamp-award.10f5d6a7.jpeg"
+  },
+  {
+    "revision": "dd2e35076b88eac0715fc0f9b0078e67",
+    "url": "/static/media/travis.dd2e3507.svg"
   },
   {
     "revision": "9e8bfce4de1e3508a98fb887c593c11b",
@@ -162,5 +182,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "837b970d5c77507b2ea4bb0ec18059a0",
     "url": "/static/media/webpack.837b970d.svg"
+  },
+  {
+    "revision": "aadec2d30d86d580165e808e345e2c66",
+    "url": "/static/media/wiki.aadec2d3.png"
   }
 ]);

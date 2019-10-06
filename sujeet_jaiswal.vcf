@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Sujeet;Jaiswal
+FN:Sujeet Kumar Jaiswal
+ORG:Infosys Limited
+TITLE:Specialist Programmer
+TEL;WORK;VOICE:08861301007
+TEL;CELL;VOICE:08861301007
+ADR;WORK:;Infosys Limited;Electronic City, Phase -1;Bengaluru;Karnataka;560100;INDIA
+ADR;HOME:;;;Bengaluru;Karnataka;;INDIA
+URL;HOME:https://sujeetjaiswal.com
+EMAIL;INTERNET:contact@sujeetjaiswal.com
+EMAIL;INTERNET:er.sujeetkumarjaiswal@gmail.com
+END:VCARD
