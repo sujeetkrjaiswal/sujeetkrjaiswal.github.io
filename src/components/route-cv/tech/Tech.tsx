@@ -23,7 +23,7 @@ const techsRender = (group: string, techs: ITechItem[]) => (
 const Tech: FC = () => {
   const classes = useStyles()
   return (
-    <Paper className={classes.card}>
+    <Paper className={classes.card} id="tech">
       <Typography variant="h5">
         Languages and Frameworks
       </Typography>

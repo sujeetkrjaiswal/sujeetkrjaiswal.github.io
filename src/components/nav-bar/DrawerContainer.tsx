@@ -6,13 +6,13 @@ import { NavBarClosed, NavBarOpened } from '../../actions/navBar.actions'
 import { IRootState } from '../../reducers/root-reducers'
 import DrawerContent from './DrawerContent'
 
-const drawerWidth = 200
+const drawerWidth = 250
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
     display: 'flex',
   },
   drawer: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       flexShrink: 0,
       width: drawerWidth,
     },
@@ -46,7 +46,7 @@ const ResponsiveDrawerContainer: FC<IProps> = (props) => {
     <div className={classes.root}>
       <CssBaseline />
       <nav className={classes.drawer} aria-label="mailbox folders">
-        <Hidden smUp={true} implementation="css">
+        <Hidden mdUp={true} implementation="css">
           <SwipeableDrawer
             // container={container}
             variant="temporary"
@@ -60,7 +60,7 @@ const ResponsiveDrawerContainer: FC<IProps> = (props) => {
             <DrawerContent />
           </SwipeableDrawer>
         </Hidden>
-        <Hidden xsDown={true} implementation="js">
+        <Hidden smDown={true} implementation="js">
           <Drawer
             anchor={theme.direction === 'rtl' ? 'right' : 'left'}
             classes={{ paper: classes.drawerPaperPermanent }}

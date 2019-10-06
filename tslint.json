@@ -1,11 +1,26 @@
 {
   "defaultSeverity": "error",
-  "extends": ["tslint:latest", "tslint-react"],
+  "extends": [
+    "tslint:latest",
+    "tslint-react"
+  ],
   "jsRules": {},
   "rules": {
-    "quotemark": [true, "single", "jsx-double"],
-    "semicolon": [true, "never"],
-    "no-submodule-imports": [true, "@material-ui/icons", "rxjs"]
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double"
+    ],
+    "semicolon": [
+      true,
+      "never"
+    ],
+    "no-submodule-imports": [
+      true,
+      "@material-ui/icons",
+      "rxjs"
+    ],
+    "object-literal-sort-keys": false
   },
   "rulesDirectory": []
 }

@@ -5,7 +5,34 @@ const iwpStyles = makeStyles((theme: Theme) => createStyles({
   contentMarginV: {
     margin: theme.spacing(1, 0),
   },
+  video: {
+    display: 'block',
+    margin: '8px auto',
+    maxWidth: '100%',
+    [theme.breakpoints.only('xs')]: {
+      width: '100%',
+      height: '200px',
+    },
+    [theme.breakpoints.up('sm')]: {
+      clear: 'right',
+      float: 'right',
+      height: '226px',
+      width: '400px',
+      marginBottom: theme.spacing(2),
+      marginLeft: theme.spacing(2),
+    },
+    [theme.breakpoints.up('lg')]: {
+      height: '315px',
+      width: '560px',
+    },
+  }
 }))
+const video = (className: string) => (<iframe
+  className={className}
+  title="Infosys Wingspan Intro Video"
+  src="https://www.youtube.com/embed/fsK0WSDqWqY"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  />)
 
 export default () => {
   const classes = iwpStyles()
@@ -17,16 +44,17 @@ export default () => {
       <Typography variant="caption">
         Oct 2017 - Present
       </Typography>
+      {video(classes.video)}
       <Typography variant="body1" className={classes.contentMarginV} align="justify">
-        Wingspan <em>(internally called Lex)</em> is a gamified talent reskilling platform
+        Wingspan (internally called Lex) is a gamified talent reskilling platform
         that helps organizations accelerate their talent transformation journey.
-      It empowers a learner through Personalized recommendations <em>(courses, learning paths,
-      programs, and certifications)</em>, Guided Learning Paths <em>(based on roles, skills, and interests)</em>
-        and Adaptive Learning <em>(based on user's skill proficiency)</em>. It encourages collaborative learning
+      It empowers a learner through Personalized recommendations (courses, learning paths,
+      programs, and certifications), Guided Learning Paths (based on roles, skills, and interests)
+        and Adaptive Learning (based on user's skill proficiency). It encourages collaborative learning
         through cohorts, shareable playlists & goals. For practice, assessments & organizing coding contest;
-      it has quizzes, an online coding platform, lab-on-cloud <em>(for environments which requires sandboxing
-      and VMs)</em>, and Virtual proctoring <em>(remote proctoring for certifications and assessments)</em>.
-      It also includes concept-graph <em>(for exploring related topics, projects, and other learning contents)</em>,
+      it has quizzes, an online coding platform, lab-on-cloud (for environments which requires sandboxing
+      and VMs), and Virtual proctoring (remote proctoring for certifications and assessments).
+      It also includes concept-graph (for exploring related topics, projects, and other learning contents),
         AI-based chat-bot, discussion forums, search, catalog, badges, analytics, authoring tool and more.
       </Typography>
       <Typography variant="body1" className={classes.contentMarginV} align="justify">

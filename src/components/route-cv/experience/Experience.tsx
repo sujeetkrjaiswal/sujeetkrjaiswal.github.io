@@ -8,29 +8,35 @@ interface IExperience {
   id: string
   avatar: any
   name: string
-  description: string
+  description: string,
+  url: string
 }
 const experiences: IExperience[] = [{
   avatar: infosys,
   description: `Infosys | Strategic Technology Group | Aug 2016  - Present`,
   id: 'exp-1',
   name: 'Specialist Programmer',
+  url: 'https://wiki.sujeetjaiswal.com/wiki/Infosys',
 }, {
   avatar: infosys,
   description: `Infosys | Education, Training & Assessment | Oct 2014 - July 2016`,
   id: 'exp-2',
   name: 'System Engineer',
+  url: 'https://wiki.sujeetjaiswal.com/wiki/Infosys',
 }, {
   avatar: infosys,
   description: `Infosys | July 2014 - Oct 2014`,
   id: 'exp-3',
   name: 'System Engineer Trainee',
+  url: 'https://wiki.sujeetjaiswal.com/wiki/Infosys',
 }]
 
 const renderExperience = (experience: IExperience, logoClass: string) => (
   <ListItem alignItems="flex-start" key={experience.id}>
     <ListItemAvatar>
-      <img src={experience.avatar} alt={experience.name} className={logoClass} />
+      <a href={experience.url} target="_blank" rel="noopener noreferrer">
+        <img src={experience.avatar} alt={experience.name} className={logoClass} />
+      </a>
     </ListItemAvatar>
     <ListItemText primary={experience.name} secondary={experience.description} />
   </ListItem>
@@ -39,7 +45,7 @@ const renderExperience = (experience: IExperience, logoClass: string) => (
 const Skills: FC = () => {
   const classes = useStyles()
   return (
-    <Paper className={classes.card}>
+    <Paper className={classes.card} id="experience">
       <Typography variant="h5" className={classes.heading}>
         Experience
       </Typography>

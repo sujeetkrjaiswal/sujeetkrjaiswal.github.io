@@ -11,6 +11,7 @@ export interface ITechItem {
   name: string
   level: string
   imgSrc: string
+  url?: string
 }
 
 const techItemStyles = makeStyles((theme: Theme) => createStyles({
@@ -34,7 +35,7 @@ const TechItem: FC<{ tech: ITechItem }> = (props) => {
       <img src={props.tech.imgSrc} alt={props.tech.name} className={classes.techImg} />
       <div className={classes.techContent}>
         <Typography variant="body1">{props.tech.name}</Typography>
-        <Typography variant="body2">{props.tech.level}</Typography>
+        <Typography variant="caption" color="textSecondary">{props.tech.level}</Typography>
       </div>
     </div>
   )

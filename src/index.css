@@ -16,3 +16,25 @@ code {
 .cv-card-padding {
   padding: 24px;
 }
+
+.cursive {
+  font-family: 'Mansalva', cursive !important;
+}
+
+.flex {
+  display: flex;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa; /* or add it to the track */
+}
+
+/* Add a thumb */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #000; 
+}

@@ -1,6 +1,9 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core'
 
 export default makeStyles((theme: Theme) => createStyles({
+  anchorOverride: {
+    color: theme.palette.text.primary
+  },
   card: {
     margin: theme.spacing(3, 0),
     padding: theme.spacing(3),

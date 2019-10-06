@@ -67,7 +67,7 @@ const links: ILinks[] = [{
   url: 'https://docs.google.com/document/d/e/2PACX-1vToUxVqY_oSkkWGh6y2_c51g2UXdrT9UtOv1q0qfxsDLMm0NWEiuYd2ywY7IohQo7sFzvyr5AtIkqZA/pub',
 }]
 
-const renderLinks = (link: ILinks, logoClass: string, showSecondary = true) => (
+const renderLinks = (link: ILinks, logoClass: string, textClass: string, showSecondary = true) => (
   <ListItem
     component="a"
     href={link.url}
@@ -78,7 +78,7 @@ const renderLinks = (link: ILinks, logoClass: string, showSecondary = true) => (
     <ListItemAvatar>
       <img src={link.avatar} alt={link.name} className={logoClass} />
     </ListItemAvatar>
-    <ListItemText primary={link.name} secondary={showSecondary ? link.description : null} />
+    <ListItemText className={textClass} primary={link.name} secondary={showSecondary ? link.description : null} />
   </ListItem>
 )
 
@@ -90,7 +90,7 @@ const AdditionalLinks: FC = () => {
         Additional Links
       </Typography>
       <List component="nav">
-        {links.map((link) => renderLinks(link, classes.logo))}
+        {links.map((link) => renderLinks(link, classes.logo, classes.anchorOverride))}
       </List>
     </Paper>
   )
@@ -100,7 +100,7 @@ export const AdditionalLinkMenu: FC = () => {
   const classes = useStyles()
   return (
     <List component="nav">
-      {links.map((link) => renderLinks(link, classes.smallLogo, false))}
+      {links.map((link) => renderLinks(link, classes.smallLogo, classes.anchorOverride, false))}
     </List>
   )
 }

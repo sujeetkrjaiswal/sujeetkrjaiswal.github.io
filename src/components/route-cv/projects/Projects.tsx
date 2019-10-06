@@ -7,7 +7,7 @@ import ProjectKhub from './ProjectKhub'
 export default () => {
   const classes = useStyles()
   return (
-    <Paper className={classes.card}>
+    <Paper className={classes.card} id="projects">
       <Typography variant="h5" className={classes.heading}>
         Projects
       </Typography>

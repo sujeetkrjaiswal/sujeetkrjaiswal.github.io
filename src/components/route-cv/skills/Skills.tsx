@@ -56,7 +56,7 @@ const renderSkill = (skill: ISkills) => (
 const Skills: FC = () => {
   const classes = useStyles()
   return (
-    <Paper className={classes.card}>
+    <Paper className={classes.card} id="skills">
       <Typography variant="h5" className={classes.heading}>
         Skills
       </Typography>

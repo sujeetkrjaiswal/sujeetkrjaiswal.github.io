@@ -7,9 +7,9 @@ import useStyles from '../common-style'
 // import msProfessional from './img-cert/ms-professional-certificate.jpg'
 // import msSpecialist from './img-cert/ms-specialist-certificate.jpg'
 // import udacityCert from './img-cert/udacity-certificate.jpg'
+import linkedIn from '../additional-links/linkedin.svg'
 import ms from './img-cert/ms.svg'
 import udacity from './img-cert/udacity.png'
-import linkedIn from '../additional-links/linkedin.svg'
 
 interface ICertificates {
   avatar: any
@@ -39,24 +39,24 @@ const certifications: ICertificates[] = [{
   url: 'https://www.youracclaim.com/badges/a8f8b3e8-b43f-4f80-b4e4-e573e42ca527/linked_in_profile',
 }]
 
-const renderCertificate = (certificate: ICertificates, logoClass: string) => (
+const renderCertificate = (certificate: ICertificates, classes: Record<'anchorOverride' | 'logo', string>) => (
   <ListItem component="a" href={certificate.url} target="_blank" alignItems="flex-start" key={certificate.id}>
     <ListItemAvatar>
-      <img src={certificate.avatar} alt={certificate.name} className={logoClass} />
+      <img src={certificate.avatar} alt={certificate.name} className={classes.logo} />
     </ListItemAvatar>
-    <ListItemText primary={certificate.name} secondary={certificate.description} />
+    <ListItemText className={classes.anchorOverride} primary={certificate.name} secondary={certificate.description} />
   </ListItem>
 )
 
 const Certifications: FC = () => {
   const classes = useStyles()
   return (
-    <Paper className={classes.card}>
+    <Paper className={classes.card} id="certifications">
       <Typography variant="h5" className={classes.heading}>
         Certifications
       </Typography>
       <List component="nav">
-        {certifications.map((certificate) => renderCertificate(certificate, classes.logo))}
+        {certifications.map((certificate) => renderCertificate(certificate, classes))}
       </List>
     </Paper>
   )

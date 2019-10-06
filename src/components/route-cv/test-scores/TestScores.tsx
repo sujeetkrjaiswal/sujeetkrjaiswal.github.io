@@ -1,6 +1,7 @@
 import { createStyles, Grid, makeStyles, Paper, Theme, Typography } from '@material-ui/core'
 import React, { FC } from 'react'
 import getStyles from '../common-style'
+
 interface IScore {
   dateCompleted: string,
   id: string
@@ -13,6 +14,7 @@ interface IScore {
   verifiedOn: string,
   url: string
 }
+
 const scores: IScore[] = [
   {
     dateCompleted: '2019-09-08T14:30:02.574208+00:00',
@@ -178,6 +180,13 @@ const scoreStyles = makeStyles((theme: Theme) => createStyles({
       textAlign: 'center',
     },
   },
+  detailsSec1: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
+  detailsSec2: {
+
+  },
   logo: {
     height: '64px',
     width: '64px',
@@ -199,12 +208,20 @@ const UnitScore: FC<{ score: IScore }> = (props) => {
     <Grid item={true} xs={12} sm={6} md={4} lg={3} xl={2}>
       <div className={classes.root}>
         <img src={props.score.thumbnailUrl} alt={props.score.title} className={classes.logo} />
-        <div className={classes.details}>
-          <Typography variant="h6">{props.score.title}</Typography>
-          <Typography variant="body1">{props.score.level} {props.score.score}</Typography>
-          <Typography variant="body2">{props.score.percentileText} percentile</Typography>
-          <Typography variant="caption">Verified on {props.score.verifiedOn}</Typography>
-        </div>
+        <Grid container={true}>
+          <Grid item={true} xs={6} sm={12}>
+            <Typography variant="h6">{props.score.title}</Typography>
+          </Grid>
+          <Grid item={true} xs={6} sm={12}>
+            <Typography variant="body1">{props.score.level} {props.score.score}</Typography>
+          </Grid>
+          <Grid item={true} xs={6} sm={12}>
+            <Typography variant="body2">{props.score.percentileText} percentile</Typography>
+          </Grid>
+          <Grid item={true} xs={6} sm={12}>
+            <Typography variant="caption">Verified on {props.score.verifiedOn}</Typography>
+          </Grid>
+        </Grid>
       </div>
     </Grid>
   )
@@ -212,7 +229,7 @@ const UnitScore: FC<{ score: IScore }> = (props) => {
 export default () => {
   const classes = getStyles()
   return (
-    <Paper className={classes.card}>
+    <Paper className={classes.card} id="scores">
       <Typography variant="h5" className={classes.heading}>
         Test Scores
       </Typography>
