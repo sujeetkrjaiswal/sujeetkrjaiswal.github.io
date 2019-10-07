@@ -35,13 +35,13 @@ const awards: IAwards[] = [{
 }, {
   avatar: instaThumb,
   award: insta,
-  description: `You can see the test scores of PluralsightIQ on this.`,
+  description: `Certificate of Appreciation | 2016`,
   id: 3,
   name: 'Insta Award',
 }, {
   avatar: techChampThumb,
   award: techChamp,
-  description: `PDF Version of Resume`,
+  description: `Certificate of Appreciation | 2015`,
   id: 4,
   name: 'Tech Champion',
 }]

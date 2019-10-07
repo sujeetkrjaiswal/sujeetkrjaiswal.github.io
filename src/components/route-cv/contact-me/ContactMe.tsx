@@ -59,7 +59,7 @@ const Contact: FC = () => {
             <a download={true} href="/sujeet_jaiswal.vcf" className={contact.links}>
               <Chip
                 icon={<ContactsIcon />}
-                label="contact@sujeetjaiswal.com"
+                label="Download Contact Card (.vcf)"
                 color="primary"
                 variant="outlined"
               />
@@ -69,6 +69,7 @@ const Contact: FC = () => {
         </Grid>
         <Grid item={true} xs={12} sm={4} md={3}>
           <img className={contact.qrImg} src={qr} alt="Contact QR Code" />
+          <Typography variant="caption" component="div" align="center">QR code for contact details</Typography>
         </Grid>
       </Grid>
     </Paper>
