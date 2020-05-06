@@ -3,6 +3,8 @@ import React, { FC } from 'react'
 
 import useStyles from '../common-style'
 import infosys from './infosys.jpeg'
+import curefit from './curefit.svg'
+import medianet from './medianet.png'
 
 interface IExperience {
   id: string
@@ -12,22 +14,22 @@ interface IExperience {
   url: string
 }
 const experiences: IExperience[] = [{
-  avatar: infosys,
-  description: `Infosys | Strategic Technology Group | Aug 2016  - Present`,
+  avatar: curefit,
+  description: `Cure.fit | Feb 2020  - Present`,
   id: 'exp-1',
-  name: 'Specialist Programmer',
-  url: 'https://wiki.sujeetjaiswal.com/wiki/Infosys',
+  name: 'Software Engineer',
+  url: 'https://www.cure.fit/',
 }, {
-  avatar: infosys,
-  description: `Infosys | Education, Training & Assessment | Oct 2014 - July 2016`,
+  avatar: medianet,
+  description: `Media.net | Programmatic Platform | Nov 2019 - Feb 2020`,
   id: 'exp-2',
-  name: 'System Engineer',
-  url: 'https://wiki.sujeetjaiswal.com/wiki/Infosys',
+  name: 'Team Lead',
+  url: 'https://www.media.net/',
 }, {
   avatar: infosys,
-  description: `Infosys | July 2014 - Oct 2014`,
+  description: `Infosys | July 2014 - Nov 2019`,
   id: 'exp-3',
-  name: 'System Engineer Trainee',
+  name: 'Specialist Programmer, Strategic Technology Group, Expert Track',
   url: 'https://wiki.sujeetjaiswal.com/wiki/Infosys',
 }]
 

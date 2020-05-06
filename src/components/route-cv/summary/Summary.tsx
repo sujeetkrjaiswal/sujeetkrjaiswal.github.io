@@ -9,23 +9,26 @@ export default () => {
         Summary
       </Typography>
       <Typography variant="body1" className={classes.content} align="justify">
-        I have 5+ years of design & development experience with Agile methodology and
-        currently leading the Front-end Engineering team of 15+ for Infosys Wingspan
-        Platform and responsible for end-to-end product development.
+      I help improve user conversion & retention by developing experiences that engage the
+      users by creating an illusion of simplicity & ease to help them finish their tasks.
       </Typography>
       <Typography variant="body1" className={classes.content} align="justify">
-        I am also involved with technical due-diligence for pre-sales and is responsible for
-        direct interactions with multiple clients for various development activities and
-        integrations with their existing systems.
+      I'm a problem solver & fast learner with about 6 years of experience in end-to-end
+      development of mobile-first responsive and progressive web-apps that are performant,
+      reliable, secure, accessible, SEO-friendly, personalized and supports internationalization
+      following Agile and OKR methodology.
       </Typography>
       <Typography variant="body1" className={classes.content} align="justify">
-        I am looking for opportunities which allow me to grow well beyond any single
-        technology stack is focused on providing an outstanding user experience.
+      I have also contributed to System architecture for high availability, scalability,
+      multi-tenant support, Authentication, Authorization & Access control.
       </Typography>
       <Typography variant="body1" className={classes.content} align="justify">
-        As a developer, I love to try out new frameworks, tools, and languages which extend
-        outside web-development to other domains like Recommendation Engine, Machine learning,
-        bash-scripting and back-end in general.
+      I have lead teams of varying sizes (2-15 developers) for different projects and
+      have experience in client interactions, requirement gathering, managing user stories, feature identification, design plan & prioritization.
+    </Typography>
+    <Typography variant="body1" className={classes.content} align="justify">
+    With a passion for technology, I love to explore new tools, languages, and
+    frameworks and solve challenging problems.
     </Typography>
     </Paper>
   )

@@ -51,20 +51,14 @@ const links: ILinks[] = [{
   description: `PDF Version of Resume`,
   id: 'resume-pdf',
   name: 'Download Resume',
-  url: 'https://docs.google.com/document/d/1xsQ5CsqtFYgLWQKw_1meVbe2BlGSNLJGr5lxOvNhUzs/export?format=pdf',
+  url: 'https://docs.google.com/document/d/1RXiNlYw7ckGTD0ovdWvrViZnYHOYs3wqRMSrfLeoMTQ/export?format=pdf',
 }, {
   avatar: googleDocs,
   description: `Resume hosted on Google Docs.
   You can download resume in your preferred format from File -> Download As`,
   id: 'google-docs',
   name: 'Resume',
-  url: 'https://docs.google.com/document/d/1xsQ5CsqtFYgLWQKw_1meVbe2BlGSNLJGr5lxOvNhUzs/edit?usp=sharing',
-}, {
-  avatar: googleDocs,
-  description: `Resume published using Google Docs.`,
-  id: 'google-docs-published',
-  name: 'Published Resume',
-  url: 'https://docs.google.com/document/d/e/2PACX-1vTXuKPEKRD3irAUjNLblIdk3r_XzYpL7_K9ZBr1o25yzdlZ2VEJ4ucrx4i0FbPf6rCUHDFwN4Reemf3/pub',
+  url: 'https://docs.google.com/document/d/1RXiNlYw7ckGTD0ovdWvrViZnYHOYs3wqRMSrfLeoMTQ/edit?usp=sharing',
 }]
 
 const renderLinks = (link: ILinks, logoClass: string, textClass: string, showSecondary = true) => (
